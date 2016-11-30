@@ -16,7 +16,7 @@
         When I visit the name page for "Amber"
         Then I should create a new user with name "Amber"
         ```
-7. You should quickly hit a block with an error like `The attribute 'name' is not accessible in User`. This requires us to move into unit testing. Write a unit (spec) test for creating a user with a name.
+7. You should quickly hit a block with an error like `The attribute 'name' is not accessible in User`. This requires us to move into unit testing. Write a unit (spec) test for creating a user with a name. (Hint: there is already one unit test. You will need a second.)
 8. Make your unit test pass.
 9. Try cucumber again - is your acceptance test passing?
 
