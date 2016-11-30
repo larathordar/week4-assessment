@@ -1,0 +1,1 @@
+# Put acceptance tests here - make sure to have a "Feature" and a "Scenario"
