@@ -5,4 +5,6 @@ describe User do
     user = User.create
     expect(user).not_to be nil
   end
+
+  # Write a new unit test here.
 end
