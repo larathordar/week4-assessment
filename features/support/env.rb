@@ -7,14 +7,14 @@ require 'capybara/cucumber'
 require 'rspec'
 require 'pry'
 
-Capybara.app = SlowFood
+Capybara.app = WeekThreeAssessment
 
-class SlowFoodWorld
+class WeekThreeAssessmentWorld
   include Capybara::DSL
   include RSpec::Expectations
   include RSpec::Matchers
 end
 
 World do
-  SlowFoodWorld.new
+  WeekThreeAssessmentWorld.new
 end
