@@ -156,5 +156,8 @@ DEPENDENCIES
   sinatra-flash (= 0.3.0)
   sinatra_warden
 
+RUBY VERSION
+   ruby 2.3.4p301
+
 BUNDLED WITH
-   1.12.5
+   1.15.3
