@@ -1,5 +1,8 @@
-require 'rubygems'
-require File.join(File.dirname(__FILE__), 'lib/controller.rb')
-use Rack::Static, urls: ['/css', '/js', '/img', '/fonts'], root: 'assets'
+# frozen_string_literal: true
 
-run WeekThreeAssessment
+# Require config/environment.rb
+require ::File.expand_path('../config/environment', __FILE__)
+
+set :app_file, __FILE__
+
+run WeekFourAssessment.new

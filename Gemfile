@@ -5,6 +5,7 @@ ruby '2.4.1'
 gem 'shotgun'
 gem 'sinatra'
 gem 'sinatra-flash'
+gem 'sinatra-redirect-with-flash'
 gem 'sinatra_warden'
 
 gem 'bcrypt'
@@ -14,6 +15,7 @@ gem 'activesupport'
 
 gem 'pg'
 
+gem 'rake'
 gem 'pry'
 
 group :development, :test do
