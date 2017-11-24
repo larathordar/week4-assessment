@@ -1,20 +1,19 @@
 ENV['RACK_ENV'] = 'test'
 
-require File.join(File.dirname(__FILE__), '..', '..', 'lib/controller.rb')
-
-require 'capybara'
-require 'capybara/cucumber'
+require './config/environment'
+require 'rack/test'
 require 'rspec'
+require 'capybara/cucumber'
 require 'pry'
+require 'database_cleaner'
+require 'database_cleaner/cucumber'
+require 'launchy'
+require 'faker'
 
-Capybara.app = WeekThreeAssessment
+Capybara.app = WeekFourAssessmentApp
 
-class WeekThreeAssessmentWorld
-  include Capybara::DSL
-  include RSpec::Expectations
-  include RSpec::Matchers
-end
+DatabaseCleaner.strategy = :transaction
 
-World do
-  WeekThreeAssessmentWorld.new
+Around do |_scenario, block|
+  DatabaseCleaner.cleaning(&block)
 end

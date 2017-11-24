@@ -1,24 +1,36 @@
 source 'https://rubygems.org'
 
-ruby '2.3.4'
+ruby '2.4.1'
 
-gem 'sinatra', '1.3.4'
-gem 'sinatra-flash', '0.3.0', require: 'sinatra/flash'
-gem 'bcrypt-ruby', '3.0.1'
+gem 'shotgun'
+gem 'sinatra'
+gem 'sinatra-flash'
+gem 'sinatra-redirect-with-flash'
 gem 'sinatra_warden'
-gem 'shotgun', '0.9.1'
 
-gem 'data_mapper'
+gem 'bcrypt'
+
+gem 'activerecord'
+gem 'activesupport'
+
 gem 'pg'
-gem 'dm-postgres-adapter'
+
+gem 'rake'
 gem 'pry'
 
 group :development, :test do
   gem 'dotenv'
-  gem 'cucumber'
-  gem 'rspec'
+  gem 'factory_bot'
+  gem 'faker'
+  gem 'pry-byebug'
+end
+
+group :test do
   gem 'capybara'
-  gem 'dm-rspec'
-  gem 'database_cleaner'
+  gem 'cucumber', '~> 2.4'
+  gem 'database_cleaner', '~> 1.4.1'
   gem 'launchy'
+  gem 'rack-test'
+  gem 'rspec'
+  gem 'shoulda-matchers'
 end
